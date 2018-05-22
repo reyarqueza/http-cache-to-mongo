@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Cache http responses to mongodb to reduce requests to a web service api.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "http",
     "rest",
@@ -13,10 +10,22 @@
     "mongodb"
   ],
   "author": "Rey Arqueza",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "assert": "^1.4.1",
     "axios": "^0.18.0",
     "mongodb": "^3.1.0-beta4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyarqueza/http-cache-to-mongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reyarqueza/http-cache-to-mongo/issues"
+  },
+  "homepage": "https://github.com/reyarqueza/http-cache-to-mongo#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
