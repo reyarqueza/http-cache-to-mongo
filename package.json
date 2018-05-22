@@ -1,0 +1,22 @@
+{
+  "name": "http-cache-to-mongo",
+  "version": "1.0.0",
+  "description": "Cache http responses to mongodb to reduce requests to a web service api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "rest",
+    "api",
+    "mongodb"
+  ],
+  "author": "Rey Arqueza",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "axios": "^0.18.0",
+    "mongodb": "^3.1.0-beta4"
+  }
+}
