@@ -14,6 +14,8 @@ If the data for that url exists in your mongo database, **http-cache-to-mongo** 
 Below is an example how you would use it. If the webservice doesn't require an apiKeyName or apiKeyValue, leave these values blank.
 
 ```
+
+const HttpCacheToMongo = require('http-cache-to-mongo');
 const apiKeyName = 'api_key';
 const apiKeyValue = 'asdfwyenxcvkshgdwkssnqf0vzja';
 const dbName = 'httpcachedb';
