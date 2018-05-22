@@ -2,7 +2,7 @@ const axios = require('axios');
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
-class HttpCacheToMongo {
+module.exports = class HttpCacheToMongo {
 
     constructor(obj) {
 
