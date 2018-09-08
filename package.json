@@ -1,6 +1,6 @@
 {
   "name": "http-cache-to-mongo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cache http responses to mongodb to reduce requests to a web service api.",
   "main": "index.js",
   "keywords": [

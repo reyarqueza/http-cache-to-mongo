@@ -11,7 +11,8 @@ module.exports = class HttpCacheToMongo {
             apiKeyValue, 
             dbName,
             collectionName,
-            connectionUrl
+            connectionUrl,
+            paramsString
         } = obj;
 
         this.apiKeyName = apiKeyName;
@@ -19,6 +20,7 @@ module.exports = class HttpCacheToMongo {
         this.dbName = dbName;
         this.collectionName = collectionName;
         this.connectionUrl = connectionUrl;
+        this.paramsString = paramsString;
 
         return new Promise(resolve => {
             MongoClient.connect(this.connectionUrl, (err, client) => {
@@ -47,7 +49,7 @@ module.exports = class HttpCacheToMongo {
 
     get(url) {
 
-        const absUrl = `${url}?${this.apiKeyName}=${this.apiKeyValue}`;
+        const absUrl = `${url}?${this.apiKeyName}=${this.apiKeyValue}${this.paramsString}`;
         
         return new Promise( (resolve, reject) => {
 

@@ -11,13 +11,14 @@ If the data for that url does not exist in your mongo database, **http-cache-to-
 If the data for that url exists in your mongo database, **http-cache-to-mongo** returns that data, and never makes a request to that url ever again, saving your request counts against your web service api quota.
 
 ## Example
-Below is an example how you would use it. If the webservice doesn't require an apiKeyName or apiKeyValue, leave these values blank.
+Below is an example how you would use it. If the webservice doesn't require an apiKeyName, apiKeyValue or extra params (paramsString) leave these values blank.
 
 ```
 
 const HttpCacheToMongo = require('http-cache-to-mongo');
 const apiKeyName = 'api_key';
 const apiKeyValue = 'asdfwyenxcvkshgdwkssnqf0vzja';
+const paramsString = '&append_to_response=credits';
 const dbName = 'httpcachedb';
 const collectionName = 'httpcache';
 const connectionUrl = 'mongodb://localhost:27017';
@@ -27,7 +28,8 @@ const cache = new HttpCacheToMongo({
     apiKeyValue,
     dbName,
     collectionName,
-    connectionUrl
+    connectionUrl,
+    paramsString
 });
 
 cache.then( (cache) => {
