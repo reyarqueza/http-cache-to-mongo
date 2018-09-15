@@ -1,6 +1,6 @@
 {
   "name": "http-cache-to-mongo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cache http responses to mongodb to reduce requests to a web service api.",
   "main": "index.js",
   "keywords": [
@@ -14,7 +14,7 @@
   "dependencies": {
     "assert": "^1.4.1",
     "axios": "^0.18.0",
-    "mongodb": "^3.1.0-beta4"
+    "mongodb": "~3.0.11"
   },
   "devDependencies": {},
   "repository": {

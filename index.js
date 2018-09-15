@@ -39,7 +39,7 @@ module.exports = class HttpCacheToMongo {
             data: json
         }
 
-        this.collection.insert(documentByUrl, (err, result) => {
+        this.collection.insertOne(documentByUrl, (err, result) => {
             assert.equal(err, null);
             assert.equal(1, result.result.n);
             assert.equal(1, result.ops.length);
